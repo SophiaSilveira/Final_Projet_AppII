@@ -14,13 +14,11 @@ class GainsPage extends StatefulWidget {
 class _GainsPageState extends State<GainsPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-       appBar: AppBar(
-        title: Text("Página de conquistas:"),
-      ),
-      body: Container(
-        margin: EdgeInsets.all(100),
-        child: Text("Nada ainda")
+    return Container(
+      height: MediaQuery.of(context).size.height * 0.86,
+      child: Padding(
+        padding: EdgeInsets.all(10),
+        child: Text('nada ainda, mas haverá!'),
       ),
     );
   }
