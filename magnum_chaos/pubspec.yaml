@@ -52,7 +52,7 @@ dev_dependencies:
 
 flutter_native_splash:
   color: "#240D3B"
-  image: lib/assets/logo/logoRedondo.png
+  image: lib/assets/logo/logoRedondo_700.png
   android: true
   ios: true
 

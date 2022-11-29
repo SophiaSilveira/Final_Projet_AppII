@@ -20,6 +20,7 @@ class _MapPageState extends State<MapPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Tela Mapa:"),
+        automaticallyImplyLeading: false,
       ),
       body: Column(
         children: [
