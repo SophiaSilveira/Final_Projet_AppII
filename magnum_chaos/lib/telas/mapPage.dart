@@ -20,30 +20,46 @@ class MapPage extends StatefulWidget {
 class _MapPageState extends State<MapPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Tela Mapa:"),
-        automaticallyImplyLeading: false,
-        toolbarHeight: 80,
-        centerTitle: true,
-        backgroundColor: Color(0xff0A6D92),
-        actions: [
-          IconButton(
-            icon: const Icon(
-              Icons.account_circle_rounded,
-              color: Colors.white,
-            ),
-            onPressed: () {
-              showBarModalBottomSheet(context: context, builder: (context) => GainsPage());
-            },
-          ),
-        ],
+    return Container(
+      alignment: Alignment.center,
+      decoration: const BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage('assets/image/mapa.jpeg'),
+          fit: BoxFit.cover,
+        ),
       ),
-      body: Column(
-        children: [
-          
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+        appBar: AppBar(
+          title: Text("Tela Mapa:"),
+          automaticallyImplyLeading: false,
+          toolbarHeight: 80,
+          centerTitle: true,
+          backgroundColor: Colors.black12,//Color(0xff0A6D92),
+          actions: [
+            IconButton(
+              icon: const Icon(
+                Icons.account_circle_rounded,
+                color: Colors.white,
+              ),
+              onPressed: () {
+                showBarModalBottomSheet(context: context, builder: (context) => GainsPage());
+              },
+            ),
+          ],
+        ),
+        body: fases(context),
+      ),
+    );
+  }
+
+  Column fases(BuildContext context) {
+    bool _isButtonDisabled = false;
+    return Column(
+        children: [       
           Container(
-            margin: EdgeInsets.all(50),
+            height: MediaQuery.of(context).size.height * 0.3,
+            margin: EdgeInsets.only(top: 80, left: 100),
             child: ElevatedButton(
               child: Text("Ir para a tela da fase zero"),
               onPressed: (){
@@ -55,34 +71,23 @@ class _MapPageState extends State<MapPage> {
             ),
           ),
           Container(
-            margin: EdgeInsets.all(50),
+          height: MediaQuery.of(context).size.height * 0.3,
+          margin: EdgeInsets.only(top: 80, right: 80),
             child: ElevatedButton(
-              child: Text("Ir para a tela da fase Um"),
-              onPressed: (){
+              child: _isButtonDisabled ? null : const CircleAvatar(
+                radius: 50,
+                backgroundImage: AssetImage('assets/logo/logoRedondo.png'),
+              ),
+              onPressed: _isButtonDisabled ? null : (){
                 Navigator.push(
                   context, 
-                  MaterialPageRoute(builder: ((context) => IntroductonPage()))
+                  MaterialPageRoute(builder: ((context) => const IntroductonPage()))
                 );
               },
             ),
           ),
         ],
-      ),
-    );
+      );
   }
 }
 
-
-//tela mapa
-/*Container(
-            margin: EdgeInsets.all(50),
-            child: ElevatedButton(
-              child: Text("Ir para a tela de conquistas"),
-              onPressed: (){
-                Navigator.push(
-                  context, 
-                  MaterialPageRoute(builder: ((context) => GainsPage()))
-                );
-              },
-            ),
-          ),*/
