@@ -76,6 +76,18 @@ flutter:
     - assets/image/mapa.jpeg
     - assets/image/portal_preto.png
     - assets/image/portal_quadrado.png
+    - assets/image/userDoctor.png
+    - assets/image/userDoctor_700.png
+    - assets/logo/logoempresa.png
+    - assets/gif/estatica_t.gif
+    - assets/image/cena_um.png
+    - assets/image/badquestion.png
+    - assets/image/questionTwo.png
+    - assets/image/bunker.jpg
+    - assets/image/contexto.jpg
+    - assets/image/vencedora.jpg
+    - assets/image/escolhamedia.jpg
+    - assets/image/segunda.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
